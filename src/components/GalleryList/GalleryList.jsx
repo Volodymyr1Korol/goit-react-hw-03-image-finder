@@ -1,4 +1,5 @@
 import '../styles.css';
+import PropTypes from 'prop-types';
 
 export const GalleryList = ({ images, setLargeImageURL }) => {
   return (
@@ -19,3 +20,11 @@ export const GalleryList = ({ images, setLargeImageURL }) => {
     </ul>
   );
 };
+
+GalleryList.propTypes = {
+  setLargeImageURL: PropTypes.func.isRequired,
+  images: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    previewURL: PropTypes.string.isRequired,
+    tags: PropTypes.string.isRequired
+}))}

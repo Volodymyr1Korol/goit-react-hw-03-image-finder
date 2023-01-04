@@ -1,8 +1,9 @@
 import { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import '../styles.css';
 
 export class Form extends Component {
+  static propTypes = {handleSubmit: PropTypes.func.isRequired}
   state = {
     query: '',
   };

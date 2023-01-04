@@ -1,8 +1,9 @@
 import { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import '../styles.css';
 
 export class Modal extends Component {
+  static propTypes = { setLargeImageURL: PropTypes.func.isRequired, largeImageURL: PropTypes.string.isRequired}
   componentDidMount() {
     document.addEventListener('keydown', this.onEscape);
   }
